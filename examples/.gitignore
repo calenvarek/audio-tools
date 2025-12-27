@@ -1,0 +1,9 @@
+node_modules/
+*.wav
+*.mp3
+*.flac
+*.log
+.env
+my-recordings/
+output/
+
