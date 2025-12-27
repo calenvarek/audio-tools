@@ -39,10 +39,6 @@ export interface RecordingResult {
   fileSize: number;
 }
 
-export interface Logger {
-  error: (message: string, ...args: any[]) => void;
-  warn: (message: string, ...args: any[]) => void;
-  info: (message: string, ...args: any[]) => void;
-  debug: (message: string, ...args: any[]) => void;
-}
+// Logger interface is now exported from @eldrforge/shared
+// Import it from there: import type { Logger } from '@eldrforge/shared';
 
