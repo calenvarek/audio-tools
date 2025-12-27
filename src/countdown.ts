@@ -308,7 +308,7 @@ export async function countdown(
         clearOnComplete: false
     };
 
-        if (onTick) {
+    if (onTick) {
         options.onTick = onTick;
     }
 

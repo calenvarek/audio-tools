@@ -1,6 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { getLogger, setLogger } from '../src/logger';
-import type { Logger } from '../src/types';
+import { getLogger, setLogger, type Logger } from '@eldrforge/shared';
 
 describe('Logger', () => {
     beforeEach(() => {

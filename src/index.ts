@@ -6,8 +6,8 @@
 // Types
 export * from './types';
 
-// Logger
-export { setLogger, getLogger } from './logger';
+// Logger - re-export from shared
+export { setLogger, getLogger, type Logger } from '@eldrforge/shared';
 
 // Countdown
 export {

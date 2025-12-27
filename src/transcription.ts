@@ -4,7 +4,7 @@
  */
 
 import { transcribeAudio as aiTranscribe } from '@eldrforge/ai-service';
-import { getLogger } from './logger';
+import { getLogger } from '@eldrforge/shared';
 
 /**
  * Transcribe audio file using AI service
