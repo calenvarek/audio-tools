@@ -4,6 +4,7 @@ agentic-*.md
 dist
 temp-dist
 node_modules
+package-lock.json
 *.log
 .vscode
 coverage/
