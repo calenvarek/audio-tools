@@ -25,9 +25,13 @@ jobs:
         with:
           node-version: 22
       - name: Install dependencies
-        # Force install to work around npm optional dependency bugs with rollup native bindings
+        # Clean install to ensure platform-specific optional deps (rollup native bindings) are resolved correctly
         # See: https://github.com/npm/cli/issues/4828
-        run: npm install --force
+        run: |
+          # Use public npm registry (package-lock.json is gitignored)
+          npm config set registry https://registry.npmjs.org/
+          rm -rf node_modules package-lock.json
+          npm install --include=optional
         timeout-minutes: 10
       - run: npm run lint
       - run: npm run build
