@@ -22,7 +22,9 @@ jobs:
         with:
           node-version: 22
       - name: Install dependencies
-        run: npm ci --verbose --foreground-scripts
+        # Force install to work around npm optional dependency bugs with rollup native bindings
+        # See: https://github.com/npm/cli/issues/4828
+        run: npm install --force
         timeout-minutes: 10
       - run: npm run lint
       - run: npm run build
@@ -41,7 +43,9 @@ jobs:
       - name: Update npm
         run: npm install -g npm@latest
       - name: Install dependencies
-        run: npm ci --verbose --foreground-scripts
+        # Force install to work around npm optional dependency bugs with rollup native bindings
+        # See: https://github.com/npm/cli/issues/4828
+        run: npm install --force
         timeout-minutes: 10
       - run: npm publish --access public
 
